@@ -1,0 +1,12 @@
+﻿.formContainer {
+    border: 3px solid #b200ff;
+    box-shadow: 20px 20px rgb(128, 128, 128);
+    padding: 3em 1em;
+    width: 60%;
+    margin: auto;
+    min-width: 50%;
+}
+
+#mainContent > h2 {
+    text-align: center;
+}
