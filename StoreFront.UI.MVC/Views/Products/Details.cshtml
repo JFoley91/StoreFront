@@ -1,0 +1,87 @@
+﻿@model StoreFront.DATA.EF.Product
+
+@{
+    ViewBag.Title = $"{Model.ProductID}";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="col-md-6">
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Category1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Category1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer.ManufacturerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer.ManufacturerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockStatusID1.StatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockStatusID1.StatusName)
+        </dd>
+
+    </dl>
+
+    <p>
+        @using (Html.BeginForm("AddToCart", "Products", new { @productID = Model.ProductID }, FormMethod.Post, new { @class = "text-center" }))
+        {
+            @Html.HiddenFor(x => x.ProductID)
+            <span class="label">Quantity: </span>
+            @Html.TextBox("Qty", 1, new { @class = "form-control", style="max-width: 50px; display: inline;" })
+            <input type="submit" value="Add To Cart" class="btn btn-primary" name="qty" />
+        }
+    </p>
+
+</div>
+<div class="col-md-6">
+    <img src="~/Content/assets/images/productimages/@Model.Image" alt="Product Image" title="@Model.ProductName" />
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

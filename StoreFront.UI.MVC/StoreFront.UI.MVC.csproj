@@ -169,17 +169,23 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrignalProductsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\CartItemViewModel.cs" />
+    <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utility\ImageUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\assets\css\bootstrap.min.css" />
@@ -191,60 +197,37 @@
     <Content Include="Content\assets\fonts\flexslider-icon.svg" />
     <Content Include="Content\assets\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\assets\fonts\slick.svg" />
-    <Content Include="Content\assets\images\about-left-image.jpg" />
-    <Content Include="Content\assets\images\about-us-page-heading.jpg" />
-    <Content Include="Content\assets\images\baner-right-image-01.jpg" />
-    <Content Include="Content\assets\images\baner-right-image-02.jpg" />
-    <Content Include="Content\assets\images\baner-right-image-03.jpg" />
-    <Content Include="Content\assets\images\baner-right-image-04.jpg" />
+    <Content Include="Content\assets\images\Armory.jpg" />
     <Content Include="Content\assets\images\close.png" />
-    <Content Include="Content\assets\images\explore-image-01.jpg" />
-    <Content Include="Content\assets\images\explore-image-02.jpg" />
-    <Content Include="Content\assets\images\instagram-01.jpg" />
-    <Content Include="Content\assets\images\instagram-02.jpg" />
-    <Content Include="Content\assets\images\instagram-03.jpg" />
-    <Content Include="Content\assets\images\instagram-04.jpg" />
-    <Content Include="Content\assets\images\instagram-05.jpg" />
-    <Content Include="Content\assets\images\instagram-06.jpg" />
-    <Content Include="Content\assets\images\kid-01.jpg" />
-    <Content Include="Content\assets\images\kid-02.jpg" />
-    <Content Include="Content\assets\images\kid-03.jpg" />
-    <Content Include="Content\assets\images\left-banner-image.jpg" />
     <Content Include="Content\assets\images\loading.gif" />
     <Content Include="Content\assets\images\logo.png" />
-    <Content Include="Content\assets\images\men-01.jpg" />
-    <Content Include="Content\assets\images\men-02.jpg" />
-    <Content Include="Content\assets\images\men-03.jpg" />
     <Content Include="Content\assets\images\next.png" />
     <Content Include="Content\assets\images\prev.png" />
-    <Content Include="Content\assets\images\productimages\BigO.gif" />
-    <Content Include="Content\assets\images\productimages\Digivice.gif" />
-    <Content Include="Content\assets\images\productimages\Dragon_claw_detail.png" />
-    <Content Include="Content\assets\images\productimages\DuelDisk.jpg" />
-    <Content Include="Content\assets\images\productimages\Estus.png" />
-    <Content Include="Content\assets\images\productimages\GM.jpg" />
-    <Content Include="Content\assets\images\productimages\Grapple.jpg" />
-    <Content Include="Content\assets\images\productimages\KR01-Hiden_Zero-One_Driver.png" />
-    <Content Include="Content\assets\images\productimages\Megabuster.jpg" />
-    <Content Include="Content\assets\images\productimages\morp.jfif" />
-    <Content Include="Content\assets\images\productimages\PowerMorpher.jpg" />
-    <Content Include="Content\assets\images\productimages\Vongola.jpg" />
-    <Content Include="Content\assets\images\productimages\Wizadriver.png" />
-    <Content Include="Content\assets\images\productimages\XrosVice.png" />
-    <Content Include="Content\assets\images\productimages\yellow-batman-utility-belt.jpg" />
-    <Content Include="Content\assets\images\products-page-heading.jpg" />
-    <Content Include="Content\assets\images\service-01.jpg" />
-    <Content Include="Content\assets\images\service-02.jpg" />
-    <Content Include="Content\assets\images\service-03.jpg" />
-    <Content Include="Content\assets\images\single-product-01.jpg" />
-    <Content Include="Content\assets\images\single-product-02.jpg" />
-    <Content Include="Content\assets\images\team-member-01.jpg" />
-    <Content Include="Content\assets\images\team-member-02.jpg" />
-    <Content Include="Content\assets\images\team-member-03.jpg" />
-    <Content Include="Content\assets\images\white-logo.png" />
-    <Content Include="Content\assets\images\women-01.jpg" />
-    <Content Include="Content\assets\images\women-02.jpg" />
-    <Content Include="Content\assets\images\women-03.jpg" />
+    <Content Include="Content\assets\images\productimages\Anvil.jpg" />
+    <Content Include="Content\assets\images\productimages\Icon.png" />
+    <Content Include="Content\assets\images\productimages\NewArmory.png" />
+    <Content Include="Content\assets\images\productimages\NewBlkBody.png" />
+    <Content Include="Content\assets\images\productimages\NewBlkHelm.png" />
+    <Content Include="Content\assets\images\productimages\NewBlkLegs.png" />
+    <Content Include="Content\assets\images\productimages\NewBlkSword.png" />
+    <Content Include="Content\assets\images\productimages\newbronzeL.png" />
+    <Content Include="Content\assets\images\productimages\NewBrzBody.png" />
+    <Content Include="Content\assets\images\productimages\NewBrzHelm.png" />
+    <Content Include="Content\assets\images\productimages\NewBrzSword.png" />
+    <Content Include="Content\assets\images\productimages\NewMithBody.png" />
+    <Content Include="Content\assets\images\productimages\NewMithHelm.png" />
+    <Content Include="Content\assets\images\productimages\NewMithLegs.png" />
+    <Content Include="Content\assets\images\productimages\NewMithSword.png" />
+    <Content Include="Content\assets\images\productimages\NewRuneBidy.png" />
+    <Content Include="Content\assets\images\productimages\NewRuneHelm.png" />
+    <Content Include="Content\assets\images\productimages\NewRuneLegs.png" />
+    <Content Include="Content\assets\images\productimages\NewRuneSword.png" />
+    <Content Include="Content\assets\images\productimages\NewSteelBody.png" />
+    <Content Include="Content\assets\images\productimages\NewSteelHelm.png" />
+    <Content Include="Content\assets\images\productimages\newsteelL.png" />
+    <Content Include="Content\assets\images\productimages\NewSteelSword.png" />
+    <Content Include="Content\assets\images\productimages\noimage.jpg" />
+    <Content Include="Content\assets\images\productimages\Smithy.jpg" />
     <Content Include="Content\assets\js\accordions.js" />
     <Content Include="Content\assets\js\bootstrap.min.js" />
     <Content Include="Content\assets\js\custom.js" />
@@ -423,6 +406,17 @@
     <Content Include="_Archive\assets\fonts\slick.eot" />
     <Content Include="_Archive\assets\fonts\slick.ttf" />
     <Content Include="_Archive\assets\fonts\slick.woff" />
+    <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\OriginalProducts\Index.cshtml" />
+    <Content Include="Views\OriginalProducts\Details.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\OriginalProducts\Create.cshtml" />
+    <Content Include="Views\OriginalProducts\Edit.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -439,6 +433,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StoreFront.DATA.EF\StoreFront.DATA.EF.csproj">
+      <Project>{717070cd-bddf-4d40-8b24-f401335dad75}</Project>
+      <Name>StoreFront.DATA.EF</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
