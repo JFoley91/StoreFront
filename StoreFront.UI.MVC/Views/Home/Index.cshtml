@@ -1,64 +1,9 @@
-﻿@{ 
+﻿@{
     ViewBag.Title = "Home";
-}    
+}
 
 <h2>@ViewBag.Title</h2>
-<!-- ***** Preloader Start ***** -->
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-<!-- ***** Preloader End ***** -->
-<!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                        <li class="scroll-to-section"><a href="#men">Men's</a></li>
-                        <li class="scroll-to-section"><a href="#women">Women's</a></li>
-                        <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
-                        <li class="submenu">
-                            <a href="javascript:;">Pages</a>
-                            <ul>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="products.html">Products</a></li>
-                                <li><a href="single-product.html">Single Product</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="javascript:;">Features</a>
-                            <ul>
-                                <li><a href="#">Features Page 1</a></li>
-                                <li><a href="#">Features Page 2</a></li>
-                                <li><a href="#">Features Page 3</a></li>
-                                <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
-                            </ul>
-                        </li>
-                        <li class="scroll-to-section"><a href="#explore">Explore</a></li>
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- ***** Header Area End ***** -->
+
 <!-- ***** Main Banner Area Start ***** -->
 <div class="main-banner" id="top">
     <div class="container-fluid">
@@ -67,13 +12,10 @@
                 <div class="left-content">
                     <div class="thumb">
                         <div class="inner-content">
-                            <h4>We Are Hexashop</h4>
-                            <span>Awesome, clean &amp; creative HTML5 Template</span>
-                            <div class="main-border-button">
-                                <a href="#">Purchase Now!</a>
-                            </div>
+                            <h4 max-width="auto" max-height="auto">Welcome to Ye Old Smithy</h4>
+                            <span>What wonders will you find?</span>
                         </div>
-                        <img src="assets/images/left-banner-image.jpg" alt="">
+                        <img src="~/Content/assets/images/productimages/NewArmory.png" alt="">
                     </div>
                 </div>
             </div>
@@ -83,80 +25,92 @@
                         <div class="col-lg-6">
                             <div class="right-first-image">
                                 <div class="thumb">
-                                    <div class="inner-content">
-                                        <h4>Women</h4>
-                                        <span>Best Clothes For Women</span>
-                                    </div>
+                                    @*<div class="inner-content">
+                                        <h4 color="#FFF">Helmets</h4>
+                                        <span>Protect your Head</span>
+                                    </div>*@
                                     <div class="hover-content">
                                         <div class="inner">
-                                            <h4>Women</h4>
-                                            <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                            <h4>Helmets</h4>
+                                            <p>Protect your noggin!</p>
                                             <div class="main-border-button">
-                                                <a href="#">Discover More</a>
+                                                <ul>
+                                                    <li>@Html.ActionLink("Discover More", "Index", "Products")</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="assets/images/baner-right-image-01.jpg">
+                                    <img src="~/Content/assets/images/productimages/NewBlkHelm.png"
+                                        alt="Black Full Helemt"  max-width="500px">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="right-first-image">
                                 <div class="thumb">
-                                    <div class="inner-content">
-                                        <h4>Men</h4>
-                                        <span>Best Clothes For Men</span>
-                                    </div>
+                                    @*<div class="inner-content">
+                                        <h4>PlateBodies</h4>
+                                        <span>Fully Protect Your Upper Body</span>
+                                    </div>*@
                                     <div class="hover-content">
                                         <div class="inner">
-                                            <h4>Men</h4>
-                                            <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                            <h4>PlateBodies</h4>
+                                            <p>Fully Protect Your Upper Body</p>
                                             <div class="main-border-button">
-                                                <a href="#">Discover More</a>
+                                                <ul>
+                                                    <li>@Html.ActionLink("Discover More", "Index", "Products")</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="assets/images/baner-right-image-02.jpg">
+                                    <img src="~/Content/assets/images/productimages/NewBlkBody.png"
+                                      alt="Black PlateBody"   >
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="right-first-image">
                                 <div class="thumb">
-                                    <div class="inner-content">
-                                        <h4>Kids</h4>
-                                        <span>Best Clothes For Kids</span>
-                                    </div>
+                                    @*<div class="inner-content">
+                                        <h4>Platelegs</h4>
+                                        <span>Armor Up Below the Waist</span>
+                                    </div>*@
                                     <div class="hover-content">
                                         <div class="inner">
-                                            <h4>Kids</h4>
-                                            <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                            <h4>Platelegs</h4>
+                                            <p>Armor Up Below the Waist</p>
                                             <div class="main-border-button">
-                                                <a href="#">Discover More</a>
+                                                <ul>
+                                                    <li>@Html.ActionLink("Discover More", "Index", "Products")</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="assets/images/baner-right-image-03.jpg">
+                                    <img src="~/Content/assets/images/productimages/NewBlkLegs.png"
+                                      alt="Black Platelegs"   >
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="right-first-image">
                                 <div class="thumb">
-                                    <div class="inner-content">
-                                        <h4>Accessories</h4>
-                                        <span>Best Trend Accessories</span>
-                                    </div>
+                                    @*<div class="inner-content">
+                                        <h4>Weapons</h4>
+                                        <span>It's Dangerous to go alone, Take This!</span>
+                                    </div>*@
                                     <div class="hover-content">
                                         <div class="inner">
-                                            <h4>Accessories</h4>
-                                            <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                            <h4>Weapons</h4>
+                                            <p>It's Dangerous to go alone, Take This!</p>
                                             <div class="main-border-button">
-                                                <a href="#">Discover More</a>
+                                                <ul>
+                                                    <li>@Html.ActionLink("Discover More", "Index", "Products")</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="assets/images/baner-right-image-04.jpg">
+                                    <img src="~/Content/assets/images/productimages/NewBlkSword.png"
+                                      alt="Black Sword"   >
                                 </div>
                             </div>
                         </div>
@@ -167,14 +121,14 @@
     </div>
 </div>
 <!-- ***** Main Banner Area End ***** -->
-<!-- ***** Men Area Starts ***** -->
+<!-- ***** Helmet Area Starts ***** -->
 <section class="section" id="men">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-heading">
-                    <h2>Men's Latest</h2>
-                    <span>Details to details is what makes Hexashop different from the other themes.</span>
+                    <h2>Full Helms</h2>
+                    <span>Shop finely crafter Helemts.</span>
                 </div>
             </div>
         </div>
@@ -193,11 +147,11 @@
                                         <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/men-01.jpg" alt="">
+                                <img src="~/Content/assets/images/productimages/NewBrzHelm.png" alt="" height="250">
                             </div>
                             <div class="down-content">
-                                <h4>Classic Spring</h4>
-                                <span>$120.00</span>
+                                <h4>Bronze Full Helmet</h4>
+                                <span>$50.00</span>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -216,33 +170,10 @@
                                         <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/men-02.jpg" alt="">
+                                <img src="~/Content/assets/images/productimages/NewSteelHelm.png" alt="" height="250">
                             </div>
                             <div class="down-content">
-                                <h4>Air Force 1 X</h4>
-                                <span>$90.00</span>
-                                <ul class="stars">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-                                    <ul>
-                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <img src="assets/images/men-03.jpg" alt="">
-                            </div>
-                            <div class="down-content">
-                                <h4>Love Nana ‘20</h4>
+                                <h4>Steel Full Helmet</h4>
                                 <span>$150.00</span>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
@@ -262,11 +193,34 @@
                                         <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/men-01.jpg" alt="">
+                                <img src="~/Content/assets/images/productimages/NewBlkHelm.png" alt="">
                             </div>
                             <div class="down-content">
-                                <h4>Classic Spring</h4>
-                                <span>$120.00</span>
+                                <h4>Black Full Helmet</h4>
+                                <span>$350.00</span>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="hover-content">
+                                    <ul>
+                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <img src="~/Content/assets/images/productimages/NewMithHelm.png" alt="" height="250">
+                            </div>
+                            <div class="down-content">
+                                <h4>Mithril Full Helmet</h4>
+                                <span>$500.00</span>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -282,15 +236,15 @@
         </div>
     </div>
 </section>
-<!-- ***** Men Area Ends ***** -->
-<!-- ***** Women Area Starts ***** -->
+<!-- ***** Helmet Area Ends ***** -->
+<!-- ***** Body Area Starts ***** -->
 <section class="section" id="women">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-heading">
-                    <h2>Women's Latest</h2>
-                    <span>Details to details is what makes Hexashop different from the other themes.</span>
+                    <h2>Platebodies</h2>
+                    <span>Finely Crafted for Maxium Defense</span>
                 </div>
             </div>
         </div>
@@ -309,11 +263,11 @@
                                         <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/women-01.jpg" alt="">
+                                <img src="~/Content/assets/images/productimages/NewBrzBody.png" alt="" height="250">
                             </div>
                             <div class="down-content">
-                                <h4>New Green Jacket</h4>
-                                <span>$75.00</span>
+                                <h4>Bronze Platebody</h4>
+                                <span>$50.00</span>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -332,11 +286,11 @@
                                         <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/women-02.jpg" alt="">
+                                <img src="~/Content/assets/images/productimages/NewSteelBody.png" alt="" height="250">
                             </div>
                             <div class="down-content">
-                                <h4>Classic Dress</h4>
-                                <span>$45.00</span>
+                                <h4>Steel Platebody</h4>
+                                <span>$175.00</span>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -355,11 +309,11 @@
                                         <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/women-03.jpg" alt="">
+                                <img src="~/Content/assets/images/productimages/NewBlkBody.png" alt="" height="250">
                             </div>
                             <div class="down-content">
-                                <h4>Spring Collection</h4>
-                                <span>$130.00</span>
+                                <h4>Black Platebody</h4>
+                                <span>$450.00</span>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -370,43 +324,43 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-                                    <ul>
-                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="~/Content/assets/images/productimages/NewMithBody.png" alt="" height="250">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Mithril Platebody</h4>
+                                    <span>$750.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/women-01.jpg" alt="">
                             </div>
-                            <div class="down-content">
-                                <h4>Classic Spring</h4>
-                                <span>$120.00</span>
-                                <ul class="stars">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- ***** Women Area Ends ***** -->
-<!-- ***** Kids Area Starts ***** -->
+<!-- ***** Body Area Ends ***** -->
+<!-- ***** Weapon Area Starts ***** -->
 <section class="section" id="kids">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-heading">
-                    <h2>Kid's Latest</h2>
-                    <span>Details to details is what makes Hexashop different from the other themes.</span>
+                    <h2>Weapons</h2>
+                    <span>Never go Unarmed.</span>
                 </div>
             </div>
         </div>
@@ -425,11 +379,11 @@
                                         <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/kid-01.jpg" alt="">
+                                <img src="~/Content/assets/images/productimages/NewBrzSword.png" alt="">
                             </div>
                             <div class="down-content">
-                                <h4>School Collection</h4>
-                                <span>$80.00</span>
+                                <h4>Bronze Sword</h4>
+                                <span>$50.00</span>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -448,11 +402,11 @@
                                         <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/kid-02.jpg" alt="">
+                                <img src="~/Content/assets/images/productimages/NewSteelSword.png" alt="" >
                             </div>
                             <div class="down-content">
-                                <h4>Summer Cap</h4>
-                                <span>$12.00</span>
+                                <h4>Steel Sword</h4>
+                                <span>$150.00</span>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -471,11 +425,11 @@
                                         <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/kid-03.jpg" alt="">
+                                <img src="~/Content/assets/images/productimages/NewBlkSword.png" alt="" >
                             </div>
                             <div class="down-content">
-                                <h4>Classic Kid</h4>
-                                <span>$30.00</span>
+                                <h4>Black Sword</h4>
+                                <span>$350.00</span>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -486,32 +440,32 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-                                    <ul>
-                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="~/Content/assets/images/productimages/NewMithSword.png" alt="" >
+                                </div>
+                                <div class="down-content">
+                                    <h4>Mithril Sword</h4>
+                                    <span>$750.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/kid-01.jpg" alt="">
                             </div>
-                            <div class="down-content">
-                                <h4>Classic Spring</h4>
-                                <span>$120.00</span>
-                                <ul class="stars">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- ***** Kids Area Ends ***** -->
+<!-- ***** weapons Area Ends ***** -->

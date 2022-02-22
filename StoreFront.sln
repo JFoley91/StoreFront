@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreFront.DATA.EF", "StoreFront.DATA.EF\StoreFront.DATA.EF.csproj", "{717070CD-BDDF-4D40-8B24-F401335DAD75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{F6280522-3B8D-4B24-B6A8-5F807A563452}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6280522-3B8D-4B24-B6A8-5F807A563452}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6280522-3B8D-4B24-B6A8-5F807A563452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717070CD-BDDF-4D40-8B24-F401335DAD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717070CD-BDDF-4D40-8B24-F401335DAD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717070CD-BDDF-4D40-8B24-F401335DAD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717070CD-BDDF-4D40-8B24-F401335DAD75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,6 +11,12 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         [HttpGet]
+        public ActionResult Product()
+        {
+            return View();
+        }
+
+        [HttpGet]
         [Authorize]
         public ActionResult About()
         {
