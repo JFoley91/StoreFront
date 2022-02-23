@@ -14,6 +14,7 @@ namespace StoreFront.DATA.EF//.Metadata
     {
         [StringLength(100)]
         [Required]
+        [Display(Name = "Product")]
         public string ProductName { get; set; }
 
         [Required]
@@ -23,8 +24,10 @@ namespace StoreFront.DATA.EF//.Metadata
         public Nullable<decimal> Price { get; set; }
 
         [Required]
+        [Display(Name = "Manufacturer")]
         public int ManufacturerID { get; set; }
 
+        [Display(Name = "Category")]
         public int CategoryID { get; set; }
 
         [Required]
