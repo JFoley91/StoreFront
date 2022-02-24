@@ -52,36 +52,36 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         @*<a href="index.html" class="logo">
-                            <img src="~/Content/assets/images/productimages/Anvil.jpg" >
-                        </a>*@
+                                <img src="~/Content/assets/images/productimages/Anvil.jpg" >
+                            </a>*@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section">@Html.ActionLink("Home", "Index", "Home")</li>
                             @*<li>@Html.ActionLink("Helmets","Product","Home")</li>
-                            <li> @Html.ActionLink("Bodies","Index","Home")</li>
-                            <li> @Html.ActionLink("Legs","Index","Home")</li>
-                            <li>@Html.ActionLink("Weapons", "Index", "Home")</li>*@
-                            <li class="submenu">                               
+                                <li> @Html.ActionLink("Bodies","Index","Home")</li>
+                                <li> @Html.ActionLink("Legs","Index","Home")</li>
+                                <li>@Html.ActionLink("Weapons", "Index", "Home")</li>*@
+                            <li class="submenu">
                                 <a href="javascript:;">Pages</a>
                                 <ul>
-                                    <li>@Html.ActionLink("Products","Index", "Products")</li>
+                                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
                                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                                 </ul>
                             </li>
                             <li class="submenu">
-                                    <a href="javascript:;">Login?</a>
-                                    @Html.Partial("_LoginPartial")
+                                <a href="javascript:;">Login?</a>
+                                @Html.Partial("_LoginPartial")
                             </li>
                             @*<li class="submenu">
-                                <a href="javascript:;">Features</a>
-                                <ul>
-                                    <li><a href="#">Features Page 1</a></li>
-                                    <li><a href="#">Features Page 2</a></li>
-                                    <li><a href="#">Features Page 3</a></li>
-                                    <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
-                                </ul>
-                            </li>*@                            
+                                    <a href="javascript:;">Features</a>
+                                    <ul>
+                                        <li><a href="#">Features Page 1</a></li>
+                                        <li><a href="#">Features Page 2</a></li>
+                                        <li><a href="#">Features Page 3</a></li>
+                                        <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
+                                    </ul>
+                                </li>*@
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -113,7 +113,7 @@
                 <div class="col-lg-3">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>                       
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     </ul>
                 </div>
@@ -145,7 +145,7 @@
         </div>
     </footer>
 
-    @RenderSection("scripts", required: false)
+
 
     <!-- jQuery -->
     <script src="~/Content/assets/js/jquery-2.1.0.min.js"></script>
@@ -187,6 +187,6 @@
         });
 
     </script>
-
+    @RenderSection("scripts", required: false)
 </body>
 </html>
