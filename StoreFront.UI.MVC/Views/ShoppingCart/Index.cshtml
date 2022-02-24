@@ -1,6 +1,4 @@
-﻿*@
-
-@model Dictionary<int, StoreFront.UI.MVC.Models.CartItemViewModel>
+﻿@model Dictionary<int, StoreFront.UI.MVC.Models.CartItemViewModel>
 
 @{
     ViewBag.Title = "Shopping Cart";
@@ -11,7 +9,7 @@
 
 
 <p class="text-right">
-    @Html.ActionLink("Back To Shopping", "Index", "Books", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Back To Shopping", "Index", "Products", null, new { @class = "btn btn-info" })
 </p>
 
 <h2 class="text-center">@ViewBag.Title</h2>
@@ -26,9 +24,8 @@ else
 {
     <table class="table">
         <tr>
-            <th>Book Cover</th>
+            <th>Product</th>
             <th>Quantity</th>
-            <th>Title</th>
             <th>Price</th>
             <th>Total</th>
             <th></th>
@@ -38,14 +35,14 @@ else
         {
             <tr>
                 <td>
-                    <img src="~/Content/assets/images/productimages/Anvil.jpg" alt="Product Image" title="@item.Value.Product.ProductName" />
+                    <img src="~/Content/assets/images/productimages/noimage.jpg" alt="Product Image" title="@item.Value.Product.ProductName" />
                 </td>
                 <td>
                     @using (Html.BeginForm("UpdateCart", "ShoppingCart", FormMethod.Post))
                     {
                         @Html.Hidden("productID", item.Key)
                         @Html.TextBox("qty", item.Value.Qty, new { @class = "form-control", style = "max-width: 50px; display: inline;" })
-                        <input type="submit" value="Update Quantity" class="btn btn-danger" />
+                        <input type="submit" value="Update Quantity" class="btn btn-info" />
                     }
 
                     @{
@@ -64,7 +61,7 @@ else
                     @string.Format($"{lineTotal:c}")
                 </td>
                 <td>
-                    @Html.ActionLink("Remove from Cart", "RemoveFromCart", new { id = item.Key })
+                    @Html.ActionLink("Remove from Cart", "RemoveCart", new { id = item.Key }, new { @class = "btn btn-danger"})
                 </td>
             </tr>
         }

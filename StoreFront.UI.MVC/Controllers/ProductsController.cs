@@ -77,6 +77,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // GET: Products/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "Category1");
@@ -91,6 +92,7 @@ namespace StoreFront.UI.MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "ProductID,ProductName,Price,Description,StockStatusID,ManufacturerID,CategoryID,Image")] Product product, HttpPostedFileBase ProductImage)
         {
             if (ModelState.IsValid)
@@ -135,6 +137,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // GET: Products/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -157,6 +160,7 @@ namespace StoreFront.UI.MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "ProductID,ProductName,Price,Description,StockStatusID,ManufacturerID,CategoryID,Image")] Product product, HttpPostedFileBase ProductImage)
         {
             if (ModelState.IsValid)
@@ -201,6 +205,7 @@ namespace StoreFront.UI.MVC.Controllers
         }
 
         // GET: Products/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -218,6 +223,7 @@ namespace StoreFront.UI.MVC.Controllers
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Product product = db.Products.Find(id);
