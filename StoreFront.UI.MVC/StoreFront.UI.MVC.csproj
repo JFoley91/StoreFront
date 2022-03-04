@@ -254,7 +254,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="configs\connections.config" />
+    <Content Include="configs\connections.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_Archive\about.html" />
     <Content Include="_Archive\assets\css\bootstrap.min.css" />
     <Content Include="_Archive\assets\css\flex-slider.css" />
